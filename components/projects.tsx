@@ -54,7 +54,9 @@ interface ProjectType {
 
 export default function Projects({ projects }: ProjectType) {
   return (
-    <div className="flex flex-col items-center">
+
+<div className="flex flex-col items-center">
+<h1 className="text-3xl mb-8 font-bold">Selected projects </h1>
       {projects.map((prj) => {
         return <ProjectSection {...prj}></ProjectSection>;
       })}
