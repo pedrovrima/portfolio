@@ -9,7 +9,7 @@ const proje = [
       "/projects/splats3.png",
       "/projects/splats4.png",
       "/projects/splats5.png",
-      "/projects/splats6.png",
+      "/projects/splats6.png"
     ],
     techstack: {
       major: [
@@ -19,14 +19,14 @@ const proje = [
         { name: "Sequelize" },
         { name: "ChakraUI" },
         { name: "Express" },
-        { name: "Heroku" },
-      ],
+        { name: "Heroku" }
+      ]
     },
     title: "SPLATs",
     description:
       "SPLATs is a bird banding data visualization tool, focusing on user interactivity. The code and data are proprietary, but you can take a look at the prototype.",
     githubUrl: "www.oama.eco.br",
-    liveUrl: "https://pedrovrima.github.io/splats-prototype/",
+    liveUrl: "https://pedrovrima.github.io/splats-prototype/"
   },
   {
     images: [
@@ -36,7 +36,7 @@ const proje = [
       "/projects/saltator4.png",
       "/projects/saltator5.png",
       "/projects/saltator6.png",
-      "/projects/saltator7.png",
+      "/projects/saltator7.png"
     ],
 
     techstack: {
@@ -49,22 +49,22 @@ const proje = [
         { name: "GraphQL" },
         { name: "Express" },
         { name: "Auth0" },
-        { name: "Heroku" },
+        { name: "Heroku" }
       ],
-      minor: [{ name: "Howler" }, { name: "React-Router" }],
+      minor: [{ name: "Howler" }, { name: "React-Router" }]
     },
     title: "Saltator",
     description:
       "Saltator is a gamified bird song learning tool. Built for the Mantiqueira Bird Observatory.",
     githubUrl: "www.oama.eco.br",
-    liveUrl: "www.oama.eco.br",
+    liveUrl: "www.oama.eco.br"
   },
   {
     images: [
       "/projects/oama1.png",
       "/projects/oama2.png",
       "/projects/oama3.png",
-      "/projects/oama4.png",
+      "/projects/oama4.png"
     ],
 
     techstack: {
@@ -72,14 +72,14 @@ const proje = [
         { name: "Tailwind" },
         { name: "React" },
         { name: "Next.js" },
-        { name: "Vercel" },
-      ],
+        { name: "Vercel" }
+      ]
     },
     title: "OAMa Website",
     description:
       "Website for the Brazilian non-profit Mantiqueira Bird Observatory",
     githubUrl: "www.oama.eco.br",
-    liveUrl: "www.oama.eco.br",
+    liveUrl: "www.oama.eco.br"
   },
   {
     images: [
@@ -101,8 +101,8 @@ const proje = [
     description:
       "App created so my wife and I could track how much our daughter slept during the day. It is also a PWA.",
     githubUrl: "www.oama.eco.br",
-    liveUrl: "www.oama.eco.br",
-  },
+    liveUrl: "www.oama.eco.br"
+  }
 ];
 
 export default function IndexPage() {
@@ -121,7 +121,6 @@ export default function IndexPage() {
         <h1 className="text-3xl mb-4 font-bold">About </h1>
       <p className="px-8 sm:px-96 text-lg">I am a graduated ecologist who has spent most of my carrer doing data management and statistical analysis using R. In the last couple years I started transiotioning to software develepoment, aiming to create tools that facilitate the work done by the organizations I work with.</p>
       </div>
-
       <Projects projects={proje}></Projects>
     </div>
   );

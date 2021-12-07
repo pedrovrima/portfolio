@@ -54,14 +54,13 @@ interface ProjectType {
 
 export default function Projects({ projects }: ProjectType) {
   return (
-
-<div className="flex flex-col items-center">
-<h1 className="text-3xl mb-8 font-bold">Selected projects </h1>
+    <div className="flex flex-col items-center mt-6">
+      <h1 className="font-title text-4xl mb-4">Selected Projects</h1>
       {projects.map((prj) => {
         return <ProjectSection {...prj}></ProjectSection>;
       })}
 
-      <Link href="https://github.com/pedrovrima" passHref><button className="flex flex-col items-center bg-gray-900 p-2 font-bold rounded-md text-sm text-gray-200">See more at Github <SiGithub size={16}/> </button></Link>
+      <Link href="https://github.com/pedrovrima" passHref><button className="flex flex-col items-center bg-gray-900  p-2 font-bold rounded-md text-sm text-gray-200">See more at Github <SiGithub size={16}/> </button></Link>
     </div>
   );
 }
@@ -70,10 +69,10 @@ const ProjectSection = (props: Project) => {
   const { title, description, techstack, githubUrl, liveUrl, images } = props;
   return (
     <>
-      <div className="mb-2 mx-4  flex flex-col-reverse sm:flex-row py-6 w-full  bg-yellow-100  justify-center ">
+      <div className="rounded-sm  shadow-md mb-6  mx-4  flex flex-col-reverse sm:flex-row py-6 w-11/12 sm:w-full   bg-white  justify-center ">
         <div className="flex flex-col justify-between text-sm sm:mr-12 px-8  sm:max-w-lg w-full">
           <div>
-          <h1 className="text-2xl font-bold">{title}</h1>
+          <h1 className="text-2xl font-title">{title}</h1>
           <p>{description}</p>
           <TechStack techstack={techstack}></TechStack>
           </div>
@@ -93,7 +92,7 @@ const TechStack = (props) => {
   const { major, minor } = props.techstack;
   return (
     <>
-      <div className="flex flex-wrap max-w-3/4">
+      <div className="flex mb-4 flex-wrap max-w-3/4">
         {major.map((maj: Major) => (
           <MajorTech {...maj}></MajorTech>
         ))}
@@ -115,7 +114,7 @@ const MajorTech = (props: Major) => {
   const { name } = props;
 
   return (
-    <div className="my-4 mx-2 flex flex-col items-center ">
+    <div className="mt-4 mx-2 flex flex-col items-center ">
       <TechLogo name={name} />
       <p className="text-xs">{name}</p>
     </div>
