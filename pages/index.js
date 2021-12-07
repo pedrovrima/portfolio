@@ -108,7 +108,7 @@ const proje = [
 export default function IndexPage() {
   return (
     <div className="flex flex-col items-center justify-center space-y-2">
-      <div className="w-full p-8 py-36 bg-gray-900 ">
+      <div className="w-full p-8 mb-12 py-36 bg-gray-900 ">
         <h1 className="text-6xl mt-24 font-extrabold text-gray-100">
           Hi, I'm Pedro{" "}
         </h1>
@@ -117,15 +117,11 @@ export default function IndexPage() {
           complex problems
         </h2>
       </div>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col  items-center">
         <h1 className="text-3xl mb-4 font-bold">About </h1>
-      <p className="px-8 sm:px-64">I am a graduated ecologist who has spent most of my carrer doing data management and statistical analysis using R. In the last couple years I started transiotioning to software develepoment, aiming to create tools that facilitate the work done by the organizations I work with.</p>
+      <p className="px-8 sm:px-96 text-lg">I am a graduated ecologist who has spent most of my carrer doing data management and statistical analysis using R. In the last couple years I started transiotioning to software develepoment, aiming to create tools that facilitate the work done by the organizations I work with.</p>
       </div>
 
-      {/* <h2 className="p-3 font-bold bg-yellow-300 md:text-2xl">
-        Hi! Welcome to your first Next.js site.
-      </h2>
- */}
       <Projects projects={proje}></Projects>
     </div>
   );
