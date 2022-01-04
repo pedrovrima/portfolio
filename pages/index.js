@@ -136,11 +136,13 @@ export default function IndexPage() {
           complex problems
         </h2>
       </div>
-      <div className="flex flex-col  items-center bg-gray-50">
+      <div className="flex flex-col  items-center py-24 bg-gray-50">
         <h1 className="text-3xl mb-4 font-bold">About </h1>
       <p className="px-8 sm:px-96 text-lg">I am a graduated ecologist who has spent most of my carrer doing data management and statistical analysis using R. In the last couple years I started transiotioning to software develepoment, aiming to create tools that facilitate the work done by the organizations I work with.</p>
       </div>
+      <div className=" mb-24">
       <Projects projects={proje}></Projects>
+      </div>
     </div>
   );
 }
