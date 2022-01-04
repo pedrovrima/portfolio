@@ -21,7 +21,8 @@ import {
   SiTailwindcss,
   SiTypescript,
   SiVercel,
-  SiWordpress
+  SiWordpress,
+  SiFirefox
 } from "react-icons/si";
 import Image from "next/image";
 
@@ -69,7 +70,7 @@ const ProjectSection = (props: Project) => {
   const { title, description, techstack, githubUrl, liveUrl, images } = props;
   return (
     <>
-      <div className="rounded-sm  shadow-md mb-6  mx-4  flex flex-col-reverse sm:flex-row py-6 w-11/12 sm:w-full   bg-white  justify-center ">
+      <div className="rounded-sm  shadow-md mb-6  mx-4  flex flex-col-reverse sm:flex-row py-6 w-11/12 sm:w-full   bg-yellow-50  justify-center ">
         <div className="flex flex-col justify-between text-sm sm:mr-12 px-8  sm:max-w-lg w-full">
           <div>
           <h1 className="text-2xl font-title">{title}</h1>
@@ -158,6 +159,7 @@ const TechLogo = (props) => {
       {name==="GraphQL"?<SiGraphql size={24}></SiGraphql>:""}
       {name==="Auth0"?<SiAuth0 size={24}></SiAuth0>:""}
       {name==="MongoDB"?<SiMongodb size={24}></SiMongodb>:""}
+      {name==="Firefox"?<SiFirefox size={24}></SiFirefox>:""}
 
     </>
   );

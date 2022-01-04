@@ -102,6 +102,25 @@ const proje = [
       "App created so my wife and I could track how much our daughter slept during the day. It is also a PWA.",
     githubUrl: "www.oama.eco.br",
     liveUrl: "www.oama.eco.br"
+  },
+  {
+    images: [
+      "/projects/sono1.png",
+      "/projects/sono2.png",
+      "/projects/sono3.png",
+    ],
+
+    techstack: {
+      major: [
+        { name: "Firefox" },
+
+      ],
+    },
+    title: "Pomodoro Blocker",
+    description:
+      "Mozilla Firefox extension that helps me being more productive. It is a Pomodoro Timer that also blocks websites, unblocking them during breaks. Still in beta version.",
+    githubUrl: "www.oama.eco.br",
+    liveUrl: "www.oama.eco.br"
   }
 ];
 
@@ -117,7 +136,7 @@ export default function IndexPage() {
           complex problems
         </h2>
       </div>
-      <div className="flex flex-col  items-center">
+      <div className="flex flex-col  items-center bg-gray-50">
         <h1 className="text-3xl mb-4 font-bold">About </h1>
       <p className="px-8 sm:px-96 text-lg">I am a graduated ecologist who has spent most of my carrer doing data management and statistical analysis using R. In the last couple years I started transiotioning to software develepoment, aiming to create tools that facilitate the work done by the organizations I work with.</p>
       </div>
