@@ -39,7 +39,7 @@ const proje = [
     title: "SPLATs",
     description:
       "SPLATs is a bird banding data visualization tool, focusing on user interactivity. The code and data are proprietary, but you can take a look at the prototype.",
-    githubUrl: "www.oama.eco.br",
+    githubUrl: "https://github.com/pedrovrima/splats-prototype",
     liveUrl: "https://pedrovrima.github.io/splats-prototype/"
   },
   {
@@ -70,8 +70,8 @@ const proje = [
     title: "Saltator",
     description:
       "Saltator is a gamified bird song learning tool. Built for the Mantiqueira Bird Observatory.",
-    githubUrl: "www.oama.eco.br",
-    liveUrl: "www.oama.eco.br"
+    githubUrl: "https://github.com/pedrovrima/saltator_final_api",
+    liveUrl: "https://saltator.oama.eco.br"
   },
   {
     images: [
@@ -92,8 +92,8 @@ const proje = [
     title: "OAMa Website",
     description:
       "Website for the Brazilian non-profit Mantiqueira Bird Observatory",
-    githubUrl: "www.oama.eco.br",
-    liveUrl: "www.oama.eco.br"
+    githubUrl: "https://github.com/pedrovrima/oama-website",
+    liveUrl: "https://www.oama.eco.br"
   },
   {
     images: [
@@ -114,8 +114,8 @@ const proje = [
     title: "Baby sleep tracker",
     description:
       "App created so my wife and I could track how much our daughter slept during the day. It is also a PWA.",
-    githubUrl: "www.oama.eco.br",
-    liveUrl: "www.oama.eco.br"
+    githubUrl: "https://github.com/pedrovrima/baby-tracker-api",
+    liveUrl: "https://sono-morena-ui.herokuapp.com/"
   },
   {
     images: ["/projects/pomodoro.png"],
@@ -126,8 +126,8 @@ const proje = [
     title: "Pomodoro Blocker",
     description:
       "Mozilla Firefox extension that helps me being more productive. It is a Pomodoro Timer that also blocks websites, unblocking them during breaks. Still in beta version.",
-    githubUrl: "www.oama.eco.br",
-    liveUrl: "www.oama.eco.br"
+    githubUrl: "https://github.com/pedrovrima/pomodoro-blocker",
+    liveUrl: "https://addons.mozilla.org/lt/firefox/addon/pomodoro-blocker/"
   }
 ];
 
