@@ -1,7 +1,7 @@
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
-import Link from "next/link"
+import Link from "next/link";
 
 import {
   SiAuth0,
@@ -22,7 +22,7 @@ import {
   SiTypescript,
   SiVercel,
   SiWordpress,
-  SiFirefox
+  SiFirefox,
 } from "react-icons/si";
 import Image from "next/image";
 
@@ -56,12 +56,18 @@ interface ProjectType {
 export default function Projects({ projects }: ProjectType) {
   return (
     <div className="flex flex-col items-center mb-24 mt-6">
-      <h1 className="font-title text-4xl mb-4">Selected Projects</h1>
+      <h1 className="font-title text-4xl mb-4 text-lime-500 bg-gray-900">
+        Selected Projects
+      </h1>
       {projects.map((prj) => {
         return <ProjectSection {...prj}></ProjectSection>;
       })}
 
-      <Link href="https://github.com/pedrovrima" passHref><button className="flex flex-col items-center bg-gray-900  p-2 font-bold rounded-md text-sm text-gray-200">See more at Github <SiGithub size={16}/> </button></Link>
+      <Link href="https://github.com/pedrovrima" passHref>
+        <button className="flex flex-col items-center bg-gray-900  p-2 font-bold rounded-md text-sm text-gray-200">
+          See more at Github <SiGithub size={16} />{" "}
+        </button>
+      </Link>
     </div>
   );
 }
@@ -73,9 +79,9 @@ const ProjectSection = (props: Project) => {
       <div className="rounded-sm  shadow-md mb-6  mx-4  flex flex-col-reverse sm:flex-row py-6 w-11/12 sm:w-full   bg-yellow-50  justify-center ">
         <div className="flex flex-col justify-between text-sm sm:mr-12 px-8  sm:max-w-lg w-full">
           <div>
-          <h1 className="text-2xl font-title">{title}</h1>
-          <p>{description}</p>
-          <TechStack techstack={techstack}></TechStack>
+            <h1 className="text-2xl font-title">{title}</h1>
+            <p>{description}</p>
+            <TechStack techstack={techstack}></TechStack>
           </div>
           <div className="flex justify-end">
             <Github url={githubUrl} /> <Live url={liveUrl} />
@@ -155,12 +161,11 @@ const TechLogo = (props) => {
       {name === "Sequelize" ? <SiSequelize size={24} /> : ""}
       {name === "D3" ? <SiD3Dotjs size={24} /> : ""}
       {name === "ChakraUI" ? <SiChakraui size={24}></SiChakraui> : ""}
-      {name==="Express"?<SiExpress size={24}></SiExpress>:""}
-      {name==="GraphQL"?<SiGraphql size={24}></SiGraphql>:""}
-      {name==="Auth0"?<SiAuth0 size={24}></SiAuth0>:""}
-      {name==="MongoDB"?<SiMongodb size={24}></SiMongodb>:""}
-      {name==="Firefox"?<SiFirefox size={24}></SiFirefox>:""}
-
+      {name === "Express" ? <SiExpress size={24}></SiExpress> : ""}
+      {name === "GraphQL" ? <SiGraphql size={24}></SiGraphql> : ""}
+      {name === "Auth0" ? <SiAuth0 size={24}></SiAuth0> : ""}
+      {name === "MongoDB" ? <SiMongodb size={24}></SiMongodb> : ""}
+      {name === "Firefox" ? <SiFirefox size={24}></SiFirefox> : ""}
     </>
   );
 };
@@ -171,7 +176,7 @@ const ProjectImage = (props) => {
     infinite: false,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
   };
 
   const { images } = props;
@@ -180,7 +185,12 @@ const ProjectImage = (props) => {
       <Carousel className="mt-2 mb-4 sm:mb-0 w-80 h-52 sm:w-96 sm:h-64 my-auto">
         {images.map((img) => (
           <div className="w-80 h-52 sm:w-96 sm:h-64 relative">
-            <Image layout="fill" objectFit="contain" src={img}></Image>
+            <Image
+              alt={img}
+              layout="fill"
+              objectFit="contain"
+              src={img}
+            ></Image>
           </div>
         ))}
       </Carousel>

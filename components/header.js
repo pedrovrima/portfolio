@@ -7,13 +7,11 @@ export default function Header() {
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
 
   return (
-    <header className="w-screen bg-gray-800">
+    <header className="w-screen bg-gray-800 z-50">
       <div className="flex flex-wrap items-center justify-between lg:container px-4 py-4 mx-auto md:flex-no-wrap md:px-6">
-          <Link href="/">
-            <a className="text-lg md:text-xl font-bold ml-3 text-white">
-              Pedro Martins DEV
-            </a>
-          </Link>
+        <Link className="text-lg md:text-xl font-bold ml-3 text-white" href="/">
+          Pedro Martins DEV
+        </Link>
 
         <button
           className=" items-center block px-3 py-2 text-white border border-white rounded md:hidden"
@@ -40,8 +38,8 @@ export default function Header() {
             // { title: "About", route: "/about" },
           ].map(({ route, title }) => (
             <li className="mt-3 md:mt-0 md:ml-6" key={title}>
-              <Link href={route}>
-                <a className="block text-white">{title}</a>
+              <Link lassName="block text-white" href={route}>
+                {title}
               </Link>
             </li>
           ))}
