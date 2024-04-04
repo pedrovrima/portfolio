@@ -1,12 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import p5 from "p5";
 
-const GameOfLife = () => {
+const GameOfLife = ({ height, width }) => {
   const sketchRef = useRef();
   const [p5Instance, setP5Instance] = useState(null);
-  const canvaSize = [3000, 3000];
+  const canvaSize = [width, height];
   const squareSize = 12;
 
+  console.log(width, height);
   useEffect(() => {
     const sketch = (p) => {
       const cols = Math.round(canvaSize[0] / squareSize);
@@ -74,8 +75,8 @@ const GameOfLife = () => {
       p.mouseMoved = () => {
         let i = Math.floor(p.mouseX / squareSize);
         let j = Math.floor(p.mouseY / squareSize);
-        if (i >= 0 && i < cols && j >= 0 && j < rows) {
-          grid[i][j] = 1; // Set the cell to 'alive'
+        if (i >= 0 && i < cols - 1 && j >= 0 && j < rows - 1) {
+          grid[i][j] = 1;
           grid[i + 1][j] = 1;
           grid[i][j + 1] = 1;
         }
@@ -91,7 +92,7 @@ const GameOfLife = () => {
         p5Instance.remove();
       }
     };
-  }, [p5Instance]);
+  }, [p5Instance, height, width]);
 
   return <div ref={sketchRef}></div>;
 };

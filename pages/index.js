@@ -1,26 +1,14 @@
 import Image from "next/image";
 import Projects from "@components/projects";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import LogoCarousel from "../components/logo-carousel";
 
 const GameOfLife = dynamic(() => import("../components/game_of_life"), {
   ssr: false,
 });
-
-const getPixelRatio = (context) => {
-  var backingStore =
-    context.backingStorePixelRatio ||
-    context.webkitBackingStorePixelRatio ||
-    context.mozBackingStorePixelRatio ||
-    context.msBackingStorePixelRatio ||
-    context.oBackingStorePixelRatio ||
-    context.backingStorePixelRatio ||
-    1;
-
-  return (window.devicePixelRatio || 1) / backingStore;
-};
 
 const proje = [
   {
@@ -140,11 +128,30 @@ const proje = [
 
 export default function IndexPage() {
   const ref = useRef();
+  const [dimension, setDimension] = useState({
+    width: undefined,
+    height: undefined,
+  });
 
+  console.log(ref);
+  useEffect(() => {
+    console.log(ref);
+    if (ref.current) {
+      setDimension({
+        width: ref?.current?.offsetWidth,
+        height: ref?.current?.offsetHeight,
+      });
+    }
+  }, [ref?.current?.offsetHeight, ref?.current?.offsetWidth]);
   return (
-    <div className="flex flex-col items-center justify-center space-y-2 bg-gray-900 h-full relative">
+    <div
+      ref={ref}
+      className="flex flex-col items-center justify-center space-y-2 bg-gray-900 h-full relative"
+    >
       <div className="absolute top-6 left-0 z-0 overflow-hidden max-w-full">
-        <GameOfLife />
+        {ref.current && (
+          <GameOfLife width={dimension.width} height={dimension.height} />
+        )}
       </div>
 
       <div className="w-full p-8  py-36  relative ">
@@ -159,21 +166,30 @@ export default function IndexPage() {
         </div>
       </div>
 
-      <div className="flex flex-col bg-gray-900 items-center py-24 z-50 w-auto ">
-        <h1 className="text-3xl mb-4 text-lime-500 font-bold">About </h1>
-        <p className="px-8 sm:px-96 text-lg text-lime-600">
-          I am a fullstack dev with a very diverse backgorund - graduated in
-          Biology with a masters in Ecology. This different career history
-          grants me not only the capacity to navigate through different areas of
-          knowledge and quickly learn new technologies, but also thought me a
-          myriad of soft skills that make me a good team member and leader.
-        </p>
-        <Link
-          className="px-4 py-2 bg-lime-600 rounded-md mt-6 hover:underline"
-          href="/about"
-        >
-          Click here to see my full bio
-        </Link>
+      <div className="w-full px-64 z-50">
+        <div className="px-16 flex flex-col bg-gray-900 items-center py-24 z-50 ">
+          <h1 className="text-3xl mb-4 text-lime-500 font-bold">About </h1>
+          <p className=" text-lg text-lime-600">
+            I am a fullstack dev with a very diverse backgorund - graduated in
+            Biology with a masters in Ecology. This different career history
+            grants me not only the capacity to navigate through different areas
+            of knowledge and quickly learn new technologies, but also thought me
+            a myriad of soft skills that make me a good team member and leader.
+          </p>
+          <Link
+            className="px-4 py-2 bg-lime-600 rounded-md mt-6  hover:underline"
+            href="/about"
+          >
+            Click here to see my full bio
+          </Link>
+          <h3 className="text-3xl mb-8 text-lime-500 font-bold mt-24">
+            Tech Stack
+          </h3>
+          <LogoCarousel />
+          <h3 className="text-3xl mb-8 text-lime-500 font-bold mt-24">
+            Recomendations
+          </h3>
+        </div>
       </div>
       <div className=" mb-24 z-50">
         <Projects projects={proje}></Projects>

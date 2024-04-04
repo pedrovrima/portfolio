@@ -30,9 +30,15 @@ module.exports = {
 
       animation: {
         shine: "move 15s ease-in-out infinite",
+        "infinite-scroll": "infinite-scroll 180s linear infinite",
       },
 
       keyframes: {
+        "infinite-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
+        },
+
         move: {
           "0%": { transform: "translateX(0)" },
           "10%": { transform: "translateX(300px)" },

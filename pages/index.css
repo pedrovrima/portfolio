@@ -6,4 +6,16 @@
     .h-66vh{
         height:66vh
     }
+    .pause {
+        &:hover{animation-play-state: paused}
+      }
+
+      .scaleOnHover{
+        transition: all .1s linear;
+        &:hover{
+            transform: scale(1.2); 
+        }
+      }
+
+   
 }
