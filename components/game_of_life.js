@@ -5,7 +5,7 @@ const GameOfLife = ({ height, width }) => {
   const sketchRef = useRef();
   const [p5Instance, setP5Instance] = useState(null);
   const canvaSize = [width, height];
-  const squareSize = 12;
+  const squareSize = width < 1000 ? 20 : 10;
 
   console.log(width, height);
   useEffect(() => {

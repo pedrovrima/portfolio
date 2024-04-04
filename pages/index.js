@@ -154,7 +154,7 @@ export default function IndexPage() {
 
       <div className="w-full p-8  py-36  relative ">
         <div className="z-50 px-12 lg:px-64 mx-auto">
-          <h1 className="text-6xl mt-24 font-extrabold text-yellow-600 z-50 relative bg-gray-900 w-max ">
+          <h1 className="text-6xl mt-24 font-extrabold text-yellow-600 z-50 relative bg-gray-900 max-w-max ">
             Hi, I'm Pedro{" "}
           </h1>
           <h2 className="text-xl text-yellow-600 z-50 relative bg-gray-900 max-w-max">
