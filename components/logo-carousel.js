@@ -112,20 +112,26 @@ export default function LogoCarousel() {
   const fakeArray = Array.apply(null, Array(numberOfElementRepetitions));
 
   return (
-    <div className="relative w-full h-24 inline-flex flex-nowrap gap-12 overflow-x-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
-      <div className="absolute h-24  w-32 bg-gradient-to-l from-transparent to-gray-900  z-50" />
-      <div className="absolute h-24  w-32 bg-gradient-to-r from-transparent to-gray-900  z-50 right-0" />{" "}
-      <ul className="flex items-end gap-12 justify-center md:justify-start [&_li]:mx-8 [&_Image]:max-w-none  animate-infinite-scroll ">
+    <div className="relative w-full h-24 inline-flex flex-nowrap gap-12 overflow-x-hidden group [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+      <div className="absolute h-24  sm:w-32 w-16 bg-gradient-to-l from-transparent to-gray-900  z-50" />
+      <div className="absolute h-24  sm:w-32 w-16 bg-gradient-to-r from-transparent to-gray-900  z-50 right-0" />{" "}
+      <ul className="flex items-end gap-[10px] justify-center md:justify-start [&_li]:mx-8 [&_Image]:max-w-none  animate-infinite-scroll group-hover:pause ">
         {fakeArray.map((a, i) => {
           console.log(i);
           return logos.map((logo, index) => (
-            <li key={index} className=" flex flex-col items-center w-max gap-2">
+            <li
+              key={index}
+              className=" flex flex-col items-center w-max gap-2 group/item "
+            >
               {React.cloneElement(logo.logo, {
                 color: "#fff",
                 size: 40,
-                className: "transform scaleOnHover  ",
+                className:
+                  "transform  transition group-hover/item:scale-[1.3] ",
               })}
-              <p className="text-white text-sm text-center">{logo.name}</p>
+              <p className="text-white text-sm text-center transition group-hover/item:scale-[1.3]">
+                {logo.name}
+              </p>
             </li>
           ));
         })}

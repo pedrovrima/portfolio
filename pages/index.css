@@ -8,8 +8,9 @@
         height:66vh
     }
     .pause {
-        &:hover{animation-play-state: paused}
+        animation-play-state: paused
       }
+
 
       .scaleOnHover{
         transition: all .1s linear;

@@ -5,6 +5,7 @@ import { useRef, useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import LogoCarousel from "../components/logo-carousel";
+import Recomendations from "../components/recomendations";
 
 const GameOfLife = dynamic(() => import("../components/game_of_life"), {
   ssr: false,
@@ -164,8 +165,8 @@ export default function IndexPage() {
         </div>
       </div>
 
-      <div className="w-full lg:px-64 px-12 z-50">
-        <div className="px-16 flex flex-col bg-gray-900 items-center py-24 z-50 ">
+      <div className="w-full lg:px-64 px-4 z-50">
+        <div className="md:px-16 px-4 flex flex-col bg-gray-900 bg-opacity-95 items-center py-24 z-50 ">
           <h1 className="text-3xl mb-4 text-lime-500 font-bold">About </h1>
           <p className=" text-lg text-lime-600">
             I am a fullstack dev with a very diverse backgorund - graduated in
@@ -174,12 +175,12 @@ export default function IndexPage() {
             of knowledge and quickly learn new technologies, but also thought me
             a myriad of soft skills that make me a good team member and leader.
           </p>
-          <Link
+          {/* <Link
             className="px-4 py-2 bg-lime-600 rounded-md mt-6  hover:underline"
             href="/about"
           >
             Click here to see my full bio
-          </Link>
+          </Link> */}
           <h3 className="text-3xl mb-8 text-lime-500 font-bold mt-24">
             Tech Stack
           </h3>
@@ -187,6 +188,7 @@ export default function IndexPage() {
           <h3 className="text-3xl mb-8 text-lime-500 font-bold mt-24">
             Recomendations
           </h3>
+          <Recomendations />
         </div>
       </div>
       <div className=" mb-24 z-50">
