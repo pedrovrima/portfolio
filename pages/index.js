@@ -186,7 +186,7 @@ export default function IndexPage() {
           </h3>
           <LogoCarousel />
           <h3 className="text-3xl mb-8 text-lime-500 font-bold mt-24">
-            Recomendations
+            Testimonials
           </h3>
           <Recomendations />
         </div>
