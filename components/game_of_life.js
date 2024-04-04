@@ -16,7 +16,7 @@ const GameOfLife = ({ height, width }) => {
 
       p.setup = () => {
         p.frameRate(15);
-        p.createCanvas(canvaSize[0], canvaSize[0]);
+        p.createCanvas(canvaSize[0], canvaSize[1]);
         for (let i = 0; i < cols; i++) {
           for (let j = 0; j < rows; j++) {
             grid[i][j] = p.floor(p.random(2));

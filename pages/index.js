@@ -133,9 +133,7 @@ export default function IndexPage() {
     height: undefined,
   });
 
-  console.log(ref);
   useEffect(() => {
-    console.log(ref);
     if (ref.current) {
       setDimension({
         width: ref?.current?.offsetWidth,
@@ -155,18 +153,18 @@ export default function IndexPage() {
       </div>
 
       <div className="w-full p-8  py-36  relative ">
-        <div className="z-50">
+        <div className="z-50 px-12 lg:px-64 mx-auto">
           <h1 className="text-6xl mt-24 font-extrabold text-yellow-600 z-50 relative bg-gray-900 w-max ">
             Hi, I'm Pedro{" "}
           </h1>
-          <h2 className="text-xl text-yellow-600 z-50 relative bg-gray-900 w-max">
+          <h2 className="text-xl text-yellow-600 z-50 relative bg-gray-900 max-w-max">
             I am a Fullstack Developer that &#128154; finding simple solutions
             for complex problems
           </h2>
         </div>
       </div>
 
-      <div className="w-full px-64 z-50">
+      <div className="w-full lg:px-64 px-12 z-50">
         <div className="px-16 flex flex-col bg-gray-900 items-center py-24 z-50 ">
           <h1 className="text-3xl mb-4 text-lime-500 font-bold">About </h1>
           <p className=" text-lg text-lime-600">
