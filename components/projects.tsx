@@ -23,6 +23,7 @@ import {
   SiVercel,
   SiWordpress,
   SiFirefox,
+  SiPostgresql,
 } from "react-icons/si";
 import Image from "next/image";
 
@@ -55,7 +56,7 @@ interface ProjectType {
 
 export default function Projects({ projects }: ProjectType) {
   return (
-    <div className="flex flex-col items-center mb-24 mt-6">
+    <div className="flex flex-col items-center mb-24 mt-6 bg-gray-900 bg-opacity-90">
       <h1 className="font-title text-4xl mb-4 text-lime-500 bg-gray-900">
         Selected Projects
       </h1>
@@ -63,9 +64,9 @@ export default function Projects({ projects }: ProjectType) {
         return <ProjectSection {...prj}></ProjectSection>;
       })}
 
-      <Link href="https://github.com/pedrovrima" passHref>
-        <button className="flex flex-col items-center bg-gray-900  p-2 font-bold rounded-md text-sm text-gray-200">
-          See more at Github <SiGithub size={16} />{" "}
+      <Link href="https://github.com/pedrovrima" passHref target="_blank">
+        <button className="flex flex-row gap-2 items-center bg-gray-900  p-2 font-bold rounded-md text-sm text-lime-200 border-lime-400 border-2">
+          <SiGithub size={16} /> View more at Github
         </button>
       </Link>
     </div>
@@ -76,7 +77,7 @@ const ProjectSection = (props: Project) => {
   const { title, description, techstack, githubUrl, liveUrl, images } = props;
   return (
     <>
-      <div className="rounded-sm  shadow-md mb-6  mx-4  flex flex-col-reverse sm:flex-row py-6 w-11/12 sm:w-full   bg-yellow-50  justify-center ">
+      <div className="rounded-sm text-lime-200  shadow-md mb-6  mx-4  flex flex-col-reverse sm:flex-row py-6 w-11/12 sm:w-full   bg-lime-50 bg-opacity-15  justify-center ">
         <div className="flex flex-col justify-between text-sm sm:mr-12 px-8  sm:max-w-lg w-full">
           <div>
             <h1 className="text-2xl font-title">{title}</h1>
@@ -165,20 +166,14 @@ const TechLogo = (props) => {
       {name === "GraphQL" ? <SiGraphql size={24}></SiGraphql> : ""}
       {name === "Auth0" ? <SiAuth0 size={24}></SiAuth0> : ""}
       {name === "MongoDB" ? <SiMongodb size={24}></SiMongodb> : ""}
+      {name === "Postgres" ? <SiPostgresql size={24}></SiPostgresql> : ""}
+
       {name === "Firefox" ? <SiFirefox size={24}></SiFirefox> : ""}
     </>
   );
 };
 
 const ProjectImage = (props) => {
-  var settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
-
   const { images } = props;
   return (
     <div className="flex h-100 justify-center items-center sm:pr-8">

@@ -1,9 +1,11 @@
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-
+import Link from "next/link";
+import { SiLinkedin } from "react-icons/si";
 export default function Recomendations() {
   return (
-    <div className="sm:px-32 px-6 py-6 rounded-md flex flex-col gap-12  bg-opacity-5 bg-lime-50">
+    <div className="sm:px-32 px-6 py-6 rounded-md flex flex-col mt-24 items-center gap-12  bg-opacity-5 bg-lime-50">
+      <h3 className="text-3xl mb-8 text-lime-500 font-bold ">Testimonials</h3>
       {recomendations.map((rec) => (
         <div className="flex flex-col gap-6">
           <p className="text-lime-600 text-lg">{rec.brief}</p>
@@ -16,6 +18,15 @@ export default function Recomendations() {
           </div>
         </div>
       ))}
+      <Link
+        href="https://www.linkedin.com/in/pedro-martins-834bb31aa/"
+        target="_blank"
+        passHref
+      >
+        <button className="flex flex-row gap-2 items-center  bg-gray-900  p-2 font-bold rounded-md text-sm text-lime-200 border-lime-400 border-2">
+          <SiLinkedin size={16} /> View more at LinkedIn
+        </button>
+      </Link>
     </div>
   );
 }

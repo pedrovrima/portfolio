@@ -14,6 +14,30 @@ const GameOfLife = dynamic(() => import("../components/game_of_life"), {
 const proje = [
   {
     images: [
+      "/projects/ilicura5.png",
+      "/projects/ilicura4.png",
+      "/projects/ilicura3.png",
+      "/projects/ilicura2.png",
+      "/projects/ilicura1.png",
+    ],
+    techstack: {
+      major: [
+        { name: "Tailwind" },
+        { name: "React" },
+        { name: "Next.js" },
+        { name: "Vercel" },
+        { name: "Postgres" },
+      ],
+    },
+    minor: [{ name: "Drizzle" }],
+    title: "WikiMudas",
+    description:
+      "Wikimudas is an online application to store and share tropical birds ageing and sexing information, used by biologists all over the country. Currently launched in beta version.",
+    githubUrl: "https://https://github.com/pedrovrima/ilicura",
+    liveUrl: "https://ilicura.vercel.app",
+  },
+  {
+    images: [
       "/projects/splats1.png",
       "/projects/splats2.png",
       "/projects/splats3.png",
@@ -185,9 +209,7 @@ export default function IndexPage() {
             Tech Stack
           </h3>
           <LogoCarousel />
-          <h3 className="text-3xl mb-8 text-lime-500 font-bold mt-24">
-            Testimonials
-          </h3>
+
           <Recomendations />
         </div>
       </div>
