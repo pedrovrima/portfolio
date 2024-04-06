@@ -89,9 +89,9 @@ const proje = [
     },
     title: "Saltator",
     description:
-      "Saltator is a gamified bird song learning tool. Built for the Mantiqueira Bird Observatory.",
+      "Saltator is a gamified bird song learning tool. Built for the Mantiqueira Bird Observatory. Currently Unavailable",
     githubUrl: "https://github.com/pedrovrima/saltator_final_api",
-    liveUrl: "https://saltator.oama.eco.br",
+    // liveUrl: "https://saltator.oama.eco.br",
   },
   {
     images: [
@@ -133,9 +133,9 @@ const proje = [
     },
     title: "Baby sleep tracker",
     description:
-      "App created so my wife and I could track how much our daughter slept during the day. It is also a PWA.",
+      "App created so my wife and I could track how much our daughter slept during the day. It is also a PWA. - Currently unavailable",
     githubUrl: "https://github.com/pedrovrima/baby-tracker-api",
-    liveUrl: "https://sono-morena-ui.herokuapp.com/",
+    // liveUrl: "https://sono-morena-ui.herokuapp.com/",
   },
   {
     images: ["/projects/pomodoro.png"],
